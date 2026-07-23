@@ -9,7 +9,7 @@ A Python-based UI test automation framework for login functionality, built with 
 - Automatic screenshot capture on test failure
 - Playwright tracing (screenshots + snapshots) for failed tests
 - HTML test reports via `pytest-html`
-- Environment-based configuration via `.env` file
+- Environment-based configuration via `.env` file, with `.env.example` as the template
 
 ## Project Structure
 
@@ -18,6 +18,7 @@ LoginAutomationTestFramework/
 ├── conftest.py              # pytest fixtures (browser, page, login_page)
 ├── pytest.ini               # pytest configuration
 ├── requirements.txt         # Python dependencies
+├── .env.example             # Example environment variables template
 ├── pages/
 │   ├── __init__.py
 │   ├── base_page.py         # Base page with common browser actions
@@ -50,7 +51,12 @@ LoginAutomationTestFramework/
    playwright install
    ```
 
-4. **Create a `.env` file** in the project root with the following variables:
+4. **Copy the template file** to create your local `.env` file:
+   ```bash
+   cp .env.example .env
+   ```
+
+   Then update the values in `.env` with your own settings:
    ```env
    BASE_URL=https://your-app-url.com
    LOGIN_USERNAME=your_username
