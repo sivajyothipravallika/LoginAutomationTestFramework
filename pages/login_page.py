@@ -3,7 +3,7 @@ from pages.base_page import BasePage
 from utils.config import BASE_URL
 
 class LoginPage(BasePage):
-    USERNAME_INPUT = "input[type='email']"
+    USERNAME_INPUT = "input[id='username']"
     PASSWORD_INPUT = "input[type='password']"
     SUBMIT_BUTTON = "button[type='submit']"
     # ERROR_MESSAGE = "[class*='error'], [role='alert']"
